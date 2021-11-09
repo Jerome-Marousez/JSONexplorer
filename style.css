@@ -15,9 +15,9 @@ h3 {
     flex-shrink: 0;
     background-color: steelblue;
     align-self: flex-start;
-    height: 100vh;
     position: sticky;
     top: 0;
+    min-height: 100vh;
     padding: 10px 10px;
     color: #fff;
     box-sizing: border-box;
@@ -45,6 +45,25 @@ th {
     position: sticky;
     top: 0;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+[data-order="desc"]::after {
+    content: '';
+    display: inline-block;
+    margin-left: 5px;
+    border: 6px solid transparent;
+    border-top-color: white;
+
+}
+
+[data-order="asc"]::after {
+    content: '';
+    display: inline-block;
+    margin: 5px 0 5px 5px;
+    border: 6px solid transparent;
+    border-bottom-color: white;
+
 
 }
 
